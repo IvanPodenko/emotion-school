@@ -31,6 +31,16 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }

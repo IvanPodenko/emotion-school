@@ -10,6 +10,10 @@
   @return #{math.div($pixels, 16)}rem
 }
 
+@function big($pixels) {
+  @return math.div($pixels, 1200) * 100 * 1vw;
+}
+
 @mixin image-set($pathToImage) {
   background-image: url("#{$pathToImage}.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
