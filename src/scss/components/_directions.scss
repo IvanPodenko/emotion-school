@@ -1,0 +1,100 @@
+.directions {
+  padding: rem(50) 0;
+  background-color: var(--color-jordy-blue);
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    & .ac {
+      margin-top: 0;
+      border: none;
+      border-radius: var(--radius-10);
+    }
+
+    & .ac-header {
+      border-radius: var(--radius-10);
+      background-color: var(--color-midnight-blue);
+    }
+
+    & .ac-header .ac-trigger {
+      padding: rem(15) rem(30);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-family);
+      font-size: rem(24);
+      font-weight: 600;
+      color: var(--color-white);
+      transition: color var(--animation-timing) var(--animation-transition);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-jordy-blue);
+      }
+    }
+
+    & .ac .ac-trigger:focus {
+      color: var(--color-white);
+    }
+
+    & .ac-panel .ac-text {
+      padding: rem(15) rem(30);
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+
+    & .ac-text-decr {
+      font-family: var(--font-family);
+      font-size: rem(20);
+      font-weight: 400;
+      line-height: rem(24);
+      color: var(--color-black);
+    }
+
+    & .ac .ac-trigger::after,
+    & .ac.is-active>.ac-header .ac-trigger::after {
+      content: "";
+    }
+
+    & .ac.is-active>.ac-header .ac-trigger:hover {
+      color: var(--color-white);
+      cursor: auto;
+    }
+
+    & .minus-plus {
+      position: relative;
+      width: rem(25);
+      height: rem(3);
+      background-color: var(--color-jordy-blue);
+      border-radius: var(--radius-100);
+      transform: rotate(0deg);
+      transition: transform var(--animation-timing) var(--animation-transition), background-color var(--animation-timing) var(--animation-transition);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem(25);
+        height: rem(3);
+        background-color: var(--color-jordy-blue);
+        border-radius: var(--radius-100);
+        transform: rotate(90deg);
+        transition: transform var(--animation-timing) var(--animation-transition), background-color var(--animation-timing) var(--animation-transition);
+      }
+    }
+
+    & .ac.is-active>.ac-header .minus-plus::after {
+      transform: rotate(90deg);
+      background-color: var(--color-white);
+    }
+
+    & .ac.is-active>.ac-header .minus-plus {
+      transform: rotate(45deg);
+      background-color: var(--color-white);
+    }
+  }
+}

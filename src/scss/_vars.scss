@@ -10,8 +10,15 @@
   --color-black: #000000;
   --color-midnight-blue: #221e78;
   --color-downy: #6fcac7;
+  --color-havelock-blue: #5187c9;
+  --color-jordy-blue: #6da0de;
+  --color-danube: #678dcf;
+
+  // mask
+    --mask-black: rgba(0, 0, 0, .75);
 
   // border-radius
+  --radius-10: #{rem(10)};
   --radius-100: #{rem(100)};
 
   // animation
