@@ -10,4 +10,8 @@ const swiper = new Swiper(".price__swiper", {
   //   delay: 2500,
   //   disableOnInteraction: false,
   // },
+  navigation: {
+    nextEl: ".js-button-prev",
+    prevEl: ".js-button-next",
+  },
 });

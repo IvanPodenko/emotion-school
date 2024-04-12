@@ -57,7 +57,7 @@
     "accordion-js": "^3.3.4",
     "graph-modal": "^1.0.4",
     "inputmask": "^5.0.7",
-    "just-validate": "^3.3.3",
+    "just-validate": "^3.10.0",
     "smooth-scroll": "^16.1.3",
     "swiper": "^11.1.1"
   }
