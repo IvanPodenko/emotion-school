@@ -12,10 +12,12 @@ const formatMessage = (formDataObj) => {
 
 const sendToTelegram = async (formDataObj) => {
   const token = "6930827969:AAEOucfBbMVsexjePSeKItFYlO2eQ5TF-Dg";
-  const chatId = "1366889505";
+  const botChatId = "1366889505"; // ID бота
+  const forwardChatId = "-1002037285427"; // ID группы или лички, куда нужно переслать сообщение
   const infomation = formatMessage(formDataObj);
 
   try {
+    // Отправляем сообщение боту
     const response = await fetch(
       `https://api.telegram.org/bot${token}/sendMessage`,
       {
@@ -24,7 +26,7 @@ const sendToTelegram = async (formDataObj) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_id: chatId,
+          chat_id: botChatId,
           text: infomation,
           parse_mode: "HTML",
         }),
@@ -35,6 +37,30 @@ const sendToTelegram = async (formDataObj) => {
       throw new Error("Ошибка отправки данных в Telegram");
     }
 
+    // Получаем ID отправленного сообщения
+    const messageData = await response.json();
+    const messageId = messageData.result.message_id;
+
+    // Пересылаем сообщение в группу или личку
+    const forwardResponse = await fetch(
+      `https://api.telegram.org/bot${token}/forwardMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: forwardChatId,
+          from_chat_id: botChatId,
+          message_id: messageId,
+        }),
+      }
+    );
+
+    if (!forwardResponse.ok) {
+      throw new Error("Ошибка пересылки сообщения в Telegram");
+    }
+
     showModal("Спасибо, скоро мы Вам перезвоним!");
   } catch (error) {
     console.error("Ошибка:", error);
@@ -43,3 +69,4 @@ const sendToTelegram = async (formDataObj) => {
 };
 
 export default sendToTelegram;
+

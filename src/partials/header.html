@@ -1,5 +1,7 @@
 <header class="header">
   <div class="container header__container">
+    @include('globals/logo.html')
+
     <div class="header__top">
       @include('globals/logo.html')
 
@@ -11,13 +13,21 @@
           @include('globals/phone.html')
         </div>
 
-        <a class="header__button btn-reset" href="#">
-          Записаться
-        </a>
+        @include('globals/signUp.html')
       </div>
     </div>
 
     <div class="header__stripe"></div>
-    @include('globals/navigation.html')
+
+    @include('burger.html')
+
+    <div class="header__menu" data-menu>
+      @include('globals/navigation.html')
+      <div class="header__stripe"></div>
+      @include('globals/address.html')
+      @include('globals/phone.html')
+      @include('globals/social.html')
+      @include('globals/signUp.html')
+    </div>
   </div>
 </header>

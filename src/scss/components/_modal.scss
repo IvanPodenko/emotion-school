@@ -43,6 +43,11 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+      top: rem(-40);
+      right: rem(10);
+    }
+
     &::before {
       content: '';
       position: absolute;

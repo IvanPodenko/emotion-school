@@ -6,10 +6,10 @@ const swiper = new Swiper(".price__swiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".js-button-prev",
     prevEl: ".js-button-next",

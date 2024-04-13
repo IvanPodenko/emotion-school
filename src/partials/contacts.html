@@ -1,0 +1,30 @@
+<section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <div class="contacts__map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Af623638af228c8ba05c44d40b55bde61c8868fa154751c2c358bf3350034b889&amp;source=constructor"
+        width="100%" height="500" frameborder="0"></iframe>
+    </div>
+    <div class="contacts__info">
+      <ul class="contacts__list list-reset">
+        <li class="contacts__item">
+          <p class="contacts__item-address">
+            Москва, Харьковский проезд, дом 7, корпус 1А
+          </p>
+          <p class="contacts__item-address">
+            Отдельный вход , с торца здания
+          </p>
+        </li>
+        <li class="contacts__item">
+          @include('globals/phone.html')
+        </li>
+        <li class="contacts__item">
+          @include('globals/email.html')
+        </li>
+        <li class="contacts__item">
+          @include('globals/social.html')
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

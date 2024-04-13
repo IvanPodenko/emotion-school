@@ -33,6 +33,12 @@
       &:hover {
         color: var(--color-jordy-blue);
       }
+
+      @include mobile {
+        padding: rem(10);
+        gap: rem(5);
+        font-size: rem(18);
+      }
     }
 
     & .ac .ac-trigger:focus {
@@ -44,6 +50,10 @@
       display: flex;
       flex-direction: column;
       gap: rem(10);
+
+      @include mobile {
+        padding: rem(10);
+      }
     }
 
     & .ac-text-decr {
@@ -52,6 +62,10 @@
       font-weight: 400;
       line-height: rem(24);
       color: var(--color-black);
+
+      @include mobile {
+        font-size: rem(16);
+      }
     }
 
     & .ac .ac-trigger::after,
@@ -66,6 +80,7 @@
 
     & .minus-plus {
       position: relative;
+      min-width: rem(25);
       width: rem(25);
       height: rem(3);
       background-color: var(--color-jordy-blue);

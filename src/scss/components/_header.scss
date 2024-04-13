@@ -1,17 +1,52 @@
 .header {
   padding: rem(15) 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
   background-color: var(--color-midnight-blue);
+
+  & .logo {
+    display: none;
+  }
+
+  @include small-tablet {
+    & {
+      display: flex;
+      height: rem(125);
+    }
+
+    & .logo {
+      display: block;
+    }
+  }
 
   &__container {
     display: flex;
     flex-direction: column;
     gap: rem(15);
+
+    @include small-tablet {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    & .logo {
+      display: block;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -27,30 +62,69 @@
     }
   }
 
-  &__button {
-    padding: rem(10) rem(20);
-    font-size: rem(18);
-    font-weight: 400;
-    color: var(--color-white);
-    background-color: var(--color-downy);
-    border: 1px solid var(--color-midnight-blue);
-    border-radius: var(--radius-100);
-    transition:
-      background-color var(--animation-timing) var(--animation-transition),
-      color var(--animation-timing) var(--animation-transition),
-      border-color var(--animation-timing) var(--animation-transition);
-
-    &:hover {
-      color: var(--color-downy);
-      background-color: var(--color-midnight-blue);
-      border-color: var(--color-downy);
-    }
-  }
-
   &__stripe {
     width: 100%;
     height: rem(2);
     background-color: var(--color-white);
     border-radius: var(--radius-100);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__menu {
+
+    & .header__stripe,
+    & .address,
+    & .phone,
+    & .social,
+    & .signup {
+      display: none;
+    }
+
+    @include small-tablet {
+      padding: rem(25) rem(30);
+      position: fixed;
+      top: rem(125);
+      left: 0;
+      width: 100%;
+      height: calc(var(--vh) - rem(125));
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: rem(25);
+      background-color: var(--color-midnight-blue);
+      overflow-y: auto;
+
+      &.menu--active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      & .nav__list {
+        flex-direction: column;
+        gap: rem(20);
+      }
+
+      & .header__stripe,
+      & .address,
+      & .phone,
+      & .social,
+      & .signup {
+        display: block;
+      }
+
+      & .address {
+        text-align: center;
+      }
+
+      & .social {
+        display: flex;
+      }
+    }
   }
 }

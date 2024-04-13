@@ -3,7 +3,7 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -18,10 +18,10 @@ console.log(mobileCheck())
 // window.addEventListener('resize', func);
 
 // Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
+import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -66,7 +66,13 @@ console.log(mobileCheck())
 
 // Подключение плавной прокрутки к якорям
 // import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+// const options = {
+//   speed: 400, // Скорость прокрутки (по умолчанию 500)
+//   offset: 125, // Смещение от якоря (по умолчанию 0)
+//   easing: "easeOut", // Функция плавности (по умолчанию 'easeInOutQuart')
+//   updateURL: false, // Обновление URL (по умолчанию true)
+// };
+// const scroll = new SmoothScroll('a[href*="#"]', options);
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

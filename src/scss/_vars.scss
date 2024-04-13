@@ -11,9 +11,13 @@
   --color-midnight-blue: #221e78;
   --color-downy: #6fcac7;
   --color-jordy-blue: #6da0de;
+  --color-red: #FF0000;
 
   // mask
-    --mask-black: rgba(0, 0, 0, .75);
+  --mask-black: rgba(0, 0, 0, .75);
+
+  // box-shadow
+  --box-shadow-map: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 
   // border-radius
   --radius-10: #{rem(10)};

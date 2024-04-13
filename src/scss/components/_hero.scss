@@ -22,7 +22,7 @@
   }
 
   &__container {
-    padding-top: rem(150);
+    padding-top: rem(225);
     padding-bottom: rem(150);
     display: flex;
     align-items: center;
@@ -30,6 +30,10 @@
     justify-content: center;
     gap: rem(25);
     text-align: center;
+
+    @include mobile {
+      padding-bottom: rem(100);
+    }
   }
 
   &__title {
@@ -37,6 +41,10 @@
     font-weight: 600;
     color: var(--color-white);
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: rem(22);
+    }
   }
 
   &__description {
@@ -44,6 +52,9 @@
     font-size: rem(24);
     font-weight: 400;
     color: var(--color-white);
+
+    @include mobile {
+      font-size: rem(18);
+    }
   }
 }
-
