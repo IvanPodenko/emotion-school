@@ -74,7 +74,6 @@
   }
 
   &__menu {
-
     & .header__stripe,
     & .address,
     & .phone,
@@ -87,7 +86,7 @@
       padding: rem(25) rem(30);
       position: fixed;
       top: rem(125);
-      left: 0;
+      left: -100%;
       width: 100%;
       height: calc(var(--vh) - rem(125));
       z-index: 200;
@@ -99,8 +98,10 @@
       gap: rem(25);
       background-color: var(--color-midnight-blue);
       overflow-y: auto;
+      transition: opacity var(--animation-timing) var(--animation-transition), visibility var(--animation-timing) var(--animation-transition), left var(--animation-timing) var(--animation-transition);
 
       &.menu--active {
+        left: 0;
         opacity: 1;
         visibility: visible;
       }
