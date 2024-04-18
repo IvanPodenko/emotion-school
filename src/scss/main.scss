@@ -1,0 +1,25 @@
+// базовые подключения
+@use "sass:math";
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/burger";
+@import "./components/logo";
+@import "./components/social";
+@import "./components/address";
+@import "./components/phone";
+@import "./components/signup";
+@import "./components/navigation";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/directions";
+@import "./components/price";
+@import "./components/question";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/modal";
+

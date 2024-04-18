@@ -1,0 +1,10 @@
+.phone {
+  font-size: rem(16);
+  font-weight: 600;
+  color: var(--color-white);
+  transition: color var(--animation-timing) var(--animation-transition);
+
+  &:hover {
+    color: var(--color-downy);
+  }
+}

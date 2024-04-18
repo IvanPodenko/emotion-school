@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="container header__container">
+    @include('globals/logo.html')
+
+    <div class="header__top">
+      @include('globals/logo.html')
+
+      <div class="header__wrapper">
+        @include('globals/social.html')
+
+        <div class="header__wrapper-inner">
+          @include('globals/address.html')
+          @include('globals/phone.html')
+        </div>
+
+        @include('globals/signUp.html')
+      </div>
+    </div>
+
+    <div class="header__stripe"></div>
+
+    @include('burger.html')
+
+    <div class="header__menu" data-menu>
+      @include('globals/navigation.html')
+      <div class="header__stripe"></div>
+      @include('globals/address.html')
+      @include('globals/phone.html')
+      @include('globals/social.html')
+      @include('globals/signUp.html')
+    </div>
+  </div>
+</header>

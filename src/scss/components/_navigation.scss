@@ -1,0 +1,19 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(5);
+  }
+
+  &__link {
+    font-size: rem(18);
+    font-weight: 600;
+    color: var(--color-white);
+    transition: color var(--animation-timing) var(--animation-transition);
+
+    &:hover {
+      color: var(--color-downy);
+    }
+  }
+}
