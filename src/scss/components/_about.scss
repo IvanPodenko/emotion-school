@@ -15,6 +15,7 @@
 
   &__item {
     &-description {
+      font-family: var(--font-family-one);
       max-width: rem(970);
       font-size: rem(22);
       font-weight: 200;

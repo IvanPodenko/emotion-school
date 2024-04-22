@@ -1,6 +1,7 @@
 :root {
   // base
-  --font-family: "Lugatype", "Calibri", sans-serif;
+  --font-family: "Lugatype", sans-serif;
+  --font-family-one: "Philosopher", sans-serif;
   --content-width: #{rem(1200)};
   --container-offset: #{rem(15)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -8,9 +9,9 @@
   // colors
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-midnight-blue: #221e78;
-  --color-downy: #6fcac7;
-  --color-jordy-blue: #6da0de;
+  --color-midnight-blue: #6da0de;
+  --color-downy: #f798c6;
+  --color-jordy-blue: #f798c6;
   --color-red: #FF0000;
 
   // mask
