@@ -2,6 +2,14 @@
   padding: rem(50) 0;
   background-color: var(--color-white);
 
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -14,7 +22,17 @@
   }
 
   &__item {
-    &-description {
+
+    &-wrap {
+      text-align: center;
+      margin-bottom: 20px;
+
+      &--pick {
+        width: 80px;
+      }
+    }
+
+      &-description {
       font-family: var(--font-family-one);
       max-width: rem(970);
       font-size: rem(22);

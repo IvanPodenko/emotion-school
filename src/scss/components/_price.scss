@@ -2,6 +2,14 @@
   padding: rem(50) 0;
   background-color: var(--color-white);
 
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-black);
+  }
+
   &__swiper {
     &-slide {
       display: flex;
