@@ -11,10 +11,48 @@
   }
 
   &__swiper {
+
+
+
     &-slide {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+
+
+      &-pick {
+        position: absolute;
+        left: 27%;
+        width: 93px;
+        top: 65%;
+
+        @include small-tablet {
+          left: 16%;
+        }
+
+        @include mobile {
+          left: 3%;
+        }
+
+        &-one {
+          position: absolute;
+          left: 65%;
+          width: 93px;
+          top: 56%;
+
+          @include small-tablet {
+            left: 65%;
+          }
+
+          @include mobile {
+            left: 68%;
+            top: 50%;
+          }
+        }
+      }
+
+
     }
   }
 
