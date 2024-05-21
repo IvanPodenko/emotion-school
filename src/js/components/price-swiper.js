@@ -7,7 +7,7 @@ const swiper = new Swiper(".price__swiper", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 5500,
+    delay: 10000,
     disableOnInteraction: false,
   },
   navigation: {
