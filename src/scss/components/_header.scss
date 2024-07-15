@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   z-index: 90;
-  background-color: var(--color-midnight-blue);
+  background-color: var(--color-header);
 
   & .logo {
     display: none;
@@ -65,7 +65,7 @@
   &__stripe {
     width: 100%;
     height: rem(2);
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     border-radius: var(--radius-100);
 
     @include small-tablet {
